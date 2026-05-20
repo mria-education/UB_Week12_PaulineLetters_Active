@@ -150,7 +150,7 @@ function collect(){
 }
 function download(name,text,type){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
 async function submitToSheets(){
- const url='https://script.google.com/macros/s/AKfycbwfOT5V4kMItR6iEFRL99K_0TPcm_0kaqRjXkKdc_EFB5g2MuRokpvIUs-kzsUzS-I0kA/exec';
+ const url='https://script.google.com/macros/s/AKfycbwh0T3S-rz6wguEBwIgFEV6x-jPz7DpssI_5bMKKDZZ5Yjr1Axq2kXxoyRwttSbJxq98Q/exec';
  if(!url){toast(tr('Paste Apps Script /exec URL first','먼저 Apps Script /exec URL을 붙여넣으세요'));return;}
  localStorage.setItem(LS+':scriptUrl',url);
  const payload=collect();
